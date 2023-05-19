@@ -1,3 +1,5 @@
 spring:
   application:
     name: redis-experiment
+  redis:
+    client-type: jedis
