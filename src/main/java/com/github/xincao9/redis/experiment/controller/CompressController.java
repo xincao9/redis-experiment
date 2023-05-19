@@ -47,8 +47,8 @@ public class CompressController {
 
     private void write(User user, byte[] data) {
         set(String.format("mobile_%d", user.getMobile().getValue()), data);
-        set(String.format("user-id-mobile_map_%d", user.getUserId().getValue()), user.getMobile().getValue());
-        set(String.format("user-uuid-mobile_map_%d", user.getUserUuid().getValue()), user.getMobile().getValue());
+        set(String.format("user-id_mobile_map_%d", user.getUserId().getValue()), user.getMobile().getValue());
+        set(String.format("user-uuid_mobile_map_%d", user.getUserUuid().getValue()), user.getMobile().getValue());
     }
 
     private User randomUser() {
