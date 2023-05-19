@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package google.protobuf.com.github.xincao9.redis.experiment;
+option java_package = "com.github.xincao9.redis.experiment";
+option java_multiple_files = true;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+
+message User {
+  StringValue nickname = 1;
+  StringValue head_icon = 2;
+  GenderEnum gender = 3;
+  UserStatusEnum user_status = 4;
+  Int64Value create_time = 5;
+  Int64Value update_time = 6;
+  Int64Value user_uuid = 7;
+  Int64Value user_id = 8;
+}
+
+enum UserStatusEnum {
+  // 未知，枚举必须有且只有一个0值索引，默认值
+  UNKNOWN_STATUS = 0;
+  // 启用
+  ENABLED = 1;
+  // 禁用
+  FORBIDDEN = 2;
+}
+
+enum GenderEnum {
+  UNKNOWN_GENDER = 0;
+  // 男
+  MALE = 1;
+  // 女
+  FEMALE = 2;
+}
