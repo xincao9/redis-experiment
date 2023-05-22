@@ -63,6 +63,7 @@ public class CompressController {
                 .setUserStatus(RandomUtils.nextBoolean() ? UserStatusEnum.ENABLED : UserStatusEnum.FORBIDDEN)
                 .setMobile(Int64Value.newBuilder().setValue(RandomUtils.nextLong(10000000000L, 99999999999L)).build())
                 .setAppId(StringValue.newBuilder().setValue(RandomStringUtils.randomAlphanumeric(40)).build())
+                .setRegFrom(StringValue.newBuilder().setValue(RandomStringUtils.randomAlphanumeric(10)).build())
                 .build();
     }
 

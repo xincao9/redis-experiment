@@ -18,6 +18,7 @@ message User {
   Int64Value user_id = 8;
   Int64Value mobile = 9;
   StringValue app_id = 10;
+  StringValue reg_from = 11;
 }
 
 enum UserStatusEnum {
